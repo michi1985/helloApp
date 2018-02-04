@@ -22,6 +22,9 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '0.18.4'
   gem 'rails_12factor'
 end
+
+# Windows環境ではtzinfo-dataというgemを含める必要があります
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
